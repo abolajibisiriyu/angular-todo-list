@@ -3,20 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+// import {AboutModule} from './AboutModule/about.module';
+import {AppRoutingModule} from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import {TodoService} from "./services/todo/todo.service";
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
-import {RouterModule, Routes} from "@angular/router";
+
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 
-
-const appRoutes: Routes = [
-  {path: '', redirectTo: '/todos', pathMatch: 'full'},
-  {path: 'todos', component: TodoListComponent},
-  {path: 'todos/:id', component: TodoDetailComponent}
-];
 
 @NgModule({
   declarations: [
@@ -30,7 +27,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule,
+    // AboutModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]
