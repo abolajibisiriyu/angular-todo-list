@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-2 col-sm-6">
+      <app-todo-form (todoAddedEvent)="addTodo($event)"></app-todo-form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-offset-2 col-sm-6">
+      <ul class="list-group">
+        <app-todo *ngFor="let todo of todos" [todo]="todo" (todoDeletedEvent)="removeTodo($event)"></app-todo>
+      </ul>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,7 @@
+.deleteButton{
+  cursor: pointer;
+}
+
+.text-strike{
+  text-decoration: line-through;
+}

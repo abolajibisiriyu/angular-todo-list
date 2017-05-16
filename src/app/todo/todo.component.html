@@ -1,0 +1,4 @@
+<li class="list-group-item" (dblclick)="onDbClick(todo)">
+  <a [routerLink]="['/todos', todo.id]" [class.text-strike]="!todo.active">{{todo.title}}</a>
+  <a class="pull-right deleteButton" (click)="deleteClicked(todo)"><span class="glyphicon glyphicon-trash text-danger"></span></a>
+</li>
