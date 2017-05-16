@@ -1,0 +1,7 @@
+<div class="form-group">
+  <input class="form-control" type="text" #todo (keyup.enter)="submitTodo(todo.value) ; todo.value = ''  " >
+</div>
+<div class="form-group">
+  <input class="btn btn-primary" type="submit" (click)="submitTodo(todo.value) ; todo.value = ''">
+</div>
+
